@@ -21,6 +21,6 @@ from berita.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('home', home, name='home'),
-    path('about', about, name='about'),
+    path('home/', home, name='home'),
+    path('about/', about, name='about'),
 ]
