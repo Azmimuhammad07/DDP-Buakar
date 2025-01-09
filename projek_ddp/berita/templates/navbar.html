@@ -8,10 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="../home">Beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Hot News</a>
+            <a class="nav-link" href="{% url 'home' %}">Beranda</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -27,11 +24,14 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../about">Tentang</a>
+            <a class="nav-link" href="{% url 'about' %}">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'exchange_rate' %}">Kurs Pertukaran</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Ketikkan keyword..." aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Pencarian" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Cari</button>
         </form>
       </div>

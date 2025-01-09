@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container-fluid">
+    <h3 class="my-4 text-center">Kurs Pertukaran Mata Uang</h3>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="amount" class="form-label">Jumlah Uang:</label>
+        <input type="number" id="amount" name="amount" class="form-control" step="any" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="currency_from" class="form-label">Dari Mata Uang:</label>
+        <select id="currency_from" name="currency_from" class="form-select">
+          <option value="USD">USD</option>
+          <option value="IDR">IDR</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="currency_to" class="form-label">Ke Mata Uang:</label>
+        <select id="currency_to" name="currency_to" class="form-select">
+          <option value="USD">USD</option>
+          <option value="IDR">IDR</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+  
+      <div class="d-flex justify-content-center my-3">
+          <button type="submit" class="btn btn-primary">Hitung</button>
+      </div>
+    </form>
+  
+    {% if exchange_result %}
+      <div class="mt-4 text-center">
+        {% if exchange_result == 'Kurs tidak tersedia.' %}
+          <p class="text-danger">{{ exchange_result }}</p>
+        {% elif exchange_result == 'Input tidak valid.' %}
+          <p class="text-danger">{{ exchange_result }}</p>
+        {% else %}
+          <p><strong>{{ exchange_result.original }} {{ exchange_result.currency_from }} = {{ exchange_result.converted_amount }} {{ exchange_result.currency_to }}</strong></p>
+          <p><em>Kurs: 1 {{ exchange_result.currency_from }} = {{ exchange_result.rate }} {{ exchange_result.currency_to }}</em></p>
+        {% endif %}
+      </div>
+    {% endif %}
+</div>
+{% endblock %}
