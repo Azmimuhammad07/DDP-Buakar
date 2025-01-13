@@ -24,6 +24,6 @@ urlpatterns = [
     path('home/', home, name='home'),
     path('page2/', page2, name='page2'),
     path('about/', about, name='about'),
-    path('berita/contoh/', contoh, name='contoh'),
+    path('berita/berita1/', berita1, name='berita1'),
     path('kurs/', exchange_rate, name='exchange_rate'),
 ]

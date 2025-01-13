@@ -7,8 +7,8 @@ def page2(request):
     return render(request, 'page2.html')
 def about(request):
     return render(request, 'about.html')
-def contoh(request):
-    return render(request, 'berita/contoh.html')
+def berita1(request):
+    return render(request, 'berita/berita1.html')
 def exchange_rate(request):
     exchange_result = None
 
