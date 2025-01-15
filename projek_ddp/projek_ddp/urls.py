@@ -24,6 +24,22 @@ urlpatterns = [
     path('home/', home, name='home'),
     path('page2/', page2, name='page2'),
     path('about/', about, name='about'),
-    path('berita/contoh/', contoh, name='contoh'),
+    path('berita/berita1/', berita1, name='berita1'),
+    path('berita/raffiahmad/', raffiahmad, name='raffiahmad'),
+    path('berita/pagarlaut/', pagarlaut, name='pagarlaut'),
+    path('berita/makansiang/', makansiang, name='makansiang'),
+    path('berita/makansiang2/', makansiang2, name='makansiang2'),
+    path('berita/ppn/', ppn, name='ppn'),
+    path('berita/pagarlauttangerang/', pagarlauttangerang, name='pagarlauttangerang'),
+    path('berita/sayur/', sayur, name='sayur'),
+    path('berita/informatika/', informatika, name='informatika'),
+    path('berita/koinjagat/', koinjagat, name='koinjagat'),
+     path('exchange_rate/', exchange_rate, name='exchange_rate'),
+
+
+
     path('kurs/', exchange_rate, name='exchange_rate'),
+    path('berita/raffiahmad/', raffiahmad, name='raffiahmad'),
+
+    
 ]
