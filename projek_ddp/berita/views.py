@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+
+
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
@@ -7,8 +9,31 @@ def page2(request):
     return render(request, 'page2.html')
 def about(request):
     return render(request, 'about.html')
-def contoh(request):
-    return render(request, 'berita/contoh.html')
+def berita1(request):
+    return render(request, 'berita/berita1.html')
+def pagarlaut(request):
+    return render(request, 'berita/pagarlaut.html')
+def raffiahmad(request):
+    return render(request, 'berita/raffiahmad.html')
+def makansiang(request):
+    return render(request, 'berita/makansiang.html')
+def makansiang2(request):
+    return render(request, 'berita/makansiang2.html')
+def ppn(request):
+    return render(request, 'berita/ppn.html')
+def pagarlauttangerang(request):
+    return render(request, 'berita/pagarlauttangerang.html')
+def sayur(request):
+    return render(request, 'berita/sayur.html')
+def informatika(request):
+    return render(request, 'berita/informatika.html')
+def exchange_rate(request):
+    return render(request, 'berita/exchange_rate.html')
+
+def koinjagat(request):
+    return render(request, 'berita/koinjagat.html')
+
+
 def exchange_rate(request):
     exchange_result = None
 

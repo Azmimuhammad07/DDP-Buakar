@@ -1,0 +1,87 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita PPN 12% Ancam Pertumbuhan Perusahaan Pembiayaan -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-ppn.png' %}" alt="Header Image" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>PPN 12% Ancam Pertumbuhan Perusahaan Pembiayaan</h2>
+      <small>Oleh <span class="text-primary">Liputan6</span>, <span class="text-primary">Bisnis</span></small>
+      <hr />
+      <section>
+        <p>
+          Kenaikan tarif Pajak Pertambahan Nilai (PPN) dari 11% menjadi 12% yang mulai berlaku pada 1 Januari 2025 menimbulkan kekhawatiran di kalangan pelaku industri pembiayaan, khususnya yang berfokus pada sektor otomotif.
+        </p>
+        <p>
+          Peningkatan tarif ini diprediksi dapat mempengaruhi daya beli masyarakat terhadap kendaraan bermotor, yang pada gilirannya berdampak pada permintaan kredit kendaraan.
+        </p>
+        <p>
+          Direktur Utama PT BRI Multifinance Indonesia (BRI Finance), Wahyudi Darmawan, menyatakan bahwa kenaikan PPN menjadi 12% akan meningkatkan biaya operasional, suku bunga, dan biaya administrasi. Hal ini berpotensi menurunkan daya beli konsumen terhadap kendaraan bermotor, sehingga dapat berdampak signifikan terhadap penyaluran pembiayaan.
+        </p>
+        <p>
+          Presiden Direktur CIMB Niaga Auto Finance (CNAF), Ristiawan Suherman, mengakui bahwa tahun 2025 akan menjadi tahun yang penuh tantangan bagi industri pembiayaan. Daya beli masyarakat yang diperkirakan belum sepenuhnya pulih menjadi salah satu hambatan utama yang harus dihadapi perusahaan.
+        </p>
+        <p>
+          Untuk mengantisipasi dampak kenaikan PPN, beberapa perusahaan pembiayaan telah menyiapkan strategi khusus. BRI Finance, misalnya, berencana meningkatkan efisiensi operasional dengan mengoptimalkan teknologi, memanfaatkan engine scoring untuk meningkatkan kualitas penilaian kredit, serta memberikan edukasi keuangan tentang perpajakan di industri jasa keuangan.
+        </p>
+        <p>
+          Sementara itu, Adira Finance akan terus memperkuat kolaborasi dengan berbagai pihak untuk meningkatkan basis pelanggan dan melakukan ekspansi bisnis secara selektif ke daerah dengan potensi tinggi. Selain itu, Adira juga mulai mengembangkan bisnis non-otomotif seperti pembiayaan multiguna, yang diharapkan dapat mendiversifikasi pendapatan dan mengurangi ketergantungan pada sektor otomotif.
+        </p>
+        <p>
+          Otoritas Jasa Keuangan (OJK) menyatakan akan terus memantau dampak kenaikan tarif PPN terhadap kinerja perusahaan pembiayaan. Kepala Eksekutif Pengawas Lembaga Pembiayaan OJK, Agusman, menjelaskan bahwa kenaikan tarif PPN berpotensi memengaruhi permintaan kredit kendaraan, mengingat hampir 70% dari pangsa pasar perusahaan pembiayaan ditopang oleh pertumbuhan industri otomotif.
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Saksikan video berikut untuk mendapatkan informasi lengkap tentang berita ini!</p>
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/55t20vgp05A?si=f-dNhsH747OA-_UT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+      <div class="card mb-3">
+        <img src="https://cdn0-production-images-kly.akamaized.net/42pggFQVFLweArLtnR8E76iXreU=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4664990/original/087620800_1701083480-20231127-Deklarasi_Kampanye_Damai-FAI_9.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Total Anggaran Pemilu 2024 Capai Rp 66,3 Triliun</h5>
+          <a target="_blank" href="https://www.liputan6.com/bisnis/read/5866037/total-anggaran-pemilu-2024-capai-rp-663-triliun?HouseAds&campaign=Pemilu2024_News_STS2" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://cdn1-production-images-kly.akamaized.net/M8tBkuRqa3AmjeckTN2kZhA4w6I=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2978885/original/021436000_1574829308-20191127-Lowongan-Pekerjaan-Dibuka-di-Job-Fair-Jakarta-TALLO-1.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Waspada Lowongan Kerja Palsu, Kenali Ciri-cirinya Sebagai Berikut</h5>
+          <a target="_blank" href="https://www.liputan6.com/bisnis/read/5878394/waspada-lowongan-kerja-palsu-kenali-ciri-cirinya-sebagai-berikut?HouseAds&campaign=InfoLoker_Bisnis_STS1" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!--Berita 3-->
+      <div class="card mb-3">
+        <img src="https://cdn1-production-images-kly.akamaized.net/7pGpQdK5ZbnmkEuJ8egTyRTJA18=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4723186/original/087016300_1705921832-fotor-ai-2024012218923.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Harga Emas Terus Naik, Dipatok Segini Sekarang</h5>
+          <a target="_blank" href="https://www.liputan6.com/bisnis/read/5881811/harga-emas-terus-naik-dipatok-segini-sekarang" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita Program Penambahan Anggaran Makan Gratis -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-makan-siang2.png' %}" alt="Header Image" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Prabowo Subianto Usulkan Tambahan Anggaran Rp 140 Triliun untuk Makan Gratis</h2>
+      <small>Oleh <span class="text-primary">Detik Finance</span>, <span class="text-primary">Detik News</span></small>
+      <hr />
+      <section>
+        <p>
+          Pemerintah Indonesia di bawah arahan Prabowo Subianto sedang mengusulkan tambahan anggaran sebesar Rp 140 triliun untuk mendukung program makan gratis bagi masyarakat. Langkah ini bertujuan untuk memperluas akses masyarakat terhadap makanan bergizi dan meningkatkan kesejahteraan sosial.
+        </p>
+        <p>
+          Dalam rencananya, anggaran tambahan ini akan digunakan untuk menyediakan makanan bergizi di berbagai fasilitas umum, termasuk sekolah dan panti asuhan. Prabowo berharap inisiatif ini dapat menjadi langkah konkret dalam mengatasi permasalahan gizi buruk di Indonesia.
+        </p>
+        <p>
+          Selain itu, program ini diharapkan mampu mendorong pertumbuhan sektor pertanian dan peternakan lokal. Pemerintah akan menggandeng koperasi petani dan peternak untuk memastikan bahan makanan yang digunakan berkualitas tinggi dan berasal dari sumber lokal.
+        </p>
+        <p>
+          Meski demikian, sejumlah pihak mengingatkan pentingnya transparansi dalam penggunaan anggaran besar ini. Pengawasan yang ketat diperlukan untuk memastikan bahwa dana tersebut benar-benar digunakan sesuai tujuan dan tidak disalahgunakan.
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Saksikan video berikut untuk mendapatkan informasi lengkap tentang berita ini!</p>
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MuOL4E0gHuE?si=5qiWnDl18VjKBCGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+      <div class="card mb-3">
+        <img src="https://cdn0-production-images-kly.akamaized.net/42pggFQVFLweArLtnR8E76iXreU=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4664990/original/087620800_1701083480-20231127-Deklarasi_Kampanye_Damai-FAI_9.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Program Makan Bergizi Gratis Mulai Digelar Hari Ini, Tersebar 190 Titik di 26 Provinsi</h5>
+          <a target="_blank" href="https://www.liputan6.com/news/read/5864570/program-makan-bergizi-gratis-mulai-digelar-hari-ini-tersebar-190-titik-di-26-provinsi" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://cdn0-production-images-kly.akamaized.net/3ABemF9g4DH09pwBgviXcmsvjLI=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5088754/original/016660300_1736498756-20250110_100226.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Jokowi Temui Sri Sultan Hamengku Buwono X di Keraton, Bahas Apa ?</h5>
+          <a target="_blank" href="https://www.liputan6.com/news/read/5881984/jokowi-temui-sri-sultan-hamengku-buwono-x-di-keraton-bahas-apa" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://cdn1-production-images-kly.akamaized.net/_cfO0xAlEsDHtRCD7AfrEEgHizg=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4978003/original/000260700_1729686146-WhatsApp_Image_2024-10-23_at_19.16.43.jpeg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Jelang 100 Hari Pemerintahan Prabowo, PDIP Ingatkan soal Defisit Anggaran</h5>
+          <a target="_blank" href="https://www.liputan6.com/news/read/5881339/jelang-100-hari-pemerintahan-prabowo-pdip-ingatkan-soal-defisit-anggaran" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

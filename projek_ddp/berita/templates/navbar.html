@@ -1,39 +1,81 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg bg-body-tertiary px-3" style="margin: 0px -12px;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Berita Gacor</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Beranda</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Kategori
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Gacor</title>
+    <style>
+        /* Padding untuk menghindari konten tertutup oleh navbar */
+        body {
+            padding-top: 80px; /* Sesuaikan tinggi navbar */
+        }
+        /* Navbar tetap di atas saat di-scroll */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        /* Styling untuk logo */
+        .navbar-brand img {
+            height: 40px; /* Sesuaikan tinggi logo sesuai kebutuhan */
+            margin-right: 10px; /* Memberikan jarak antara logo dan teks */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg px-3" style="background-color: #0d6efd; margin: 0px -12px;">
+        <div class="container-fluid">
+            <!-- Logo dan nama brand -->
+            <a class="navbar-brand text-white" href="{% url 'home' %}" style="transition: color 0.3s, transform 0.3s;" onmouseover="this.style.color='#001f5f'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">
+                <!-- Menambahkan gambar logo disamping teks -->
+                <img src="{% static 'img/liputan-gacor.png' %}" alt="Logo Berita Gacor">
+                Liputan Gacor
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Olahraga</a></li>
-              <li><a class="dropdown-item" href="#">Politik</a></li>
-              <li><a class="dropdown-item" href="#">Kesehatan</a></li>
-              <li><a class="dropdown-item" href="#">Sosial</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Selengkapnya...</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">Tentang</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'exchange_rate' %}">Kurs Pertukaran</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Pencarian" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Cari</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'home' %}" style="transition: color 0.3s, transform 0.3s;" onmouseover="this.style.color='#001f5f'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="transition: color 0.3s, transform 0.3s;" onmouseover="this.style.color='#001f5f'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">
+                            Kategori
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" style="transition: color 0.3s, transform 0.3s;" onmouseover="this.style.color='#001f5f'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='black'; this.style.transform='scale(1)';">Olahraga</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" style="transition: color 0.3s, transform 0.3s;" onmouseover="this.style.color='#001f5f'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='black'; this.style.transform='scale(1)';">Politik</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" style="transition: color 0.3s, transform 0.3s;" onmouseover="this.style.color='#001f5f'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='black'; this.style.transform='scale(1)';">Kesehatan</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" style="transition: color 0.3s, transform 0.3s;" onmouseover="this.style.color='#001f5f'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='black'; this.style.transform='scale(1)';">Sosial</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="#" style="transition: color 0.3s, transform 0.3s;" onmouseover="this.style.color='#001f5f'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='black'; this.style.transform='scale(1)';">Selengkapnya...</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'about' %}" style="transition: color 0.3s, transform 0.3s;" onmouseover="this.style.color='#001f5f'; this.style.transform='scale(1.2)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">Tentang</a>
+                    </li>
+                    
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pencarian" aria-label="Search">
+                    <button class="btn btn-light" type="submit">Cari</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

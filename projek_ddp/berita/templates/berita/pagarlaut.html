@@ -1,0 +1,138 @@
+{% extends '../index.html' %} {% block content %} {% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9">
+      <div class="d-flex justify-content-center mb-5">
+        <img
+          src="{% static 'img/berita-pagarlaut.png' %}"
+          alt="Header Image"
+          class="img-fluid"
+          width="640px"
+          height="360px"
+        />
+      </div>
+      <h2>
+        Pagar Laut Misterius Ternyata Juga Muncul <br>di Pesisir Bekasi
+      </h2>
+
+
+      <small>Oleh <span class="text-primary">Author</span></small>
+      <hr />
+      <!-- Isi berita -->
+      <section>
+        <h5>Latar Belakang Proyek</h5>
+        <p>
+            Struktur pagar yang muncul di perairan Bekasi, Jawa Barat, sempat memicu 
+            spekulasi di kalangan masyarakat setempat. Setelah dilakukan investigasi, 
+            terungkap bahwa pagar tersebut merupakan bagian dari proyek pemerintah Jawa Barat. 
+            Tujuannya adalah untuk mengatasi masalah abrasi pantai yang kian mengkhawatirkan, 
+            sekaligus mendukung kesejahteraan masyarakat pesisir.
+        </p>
+        <h5>Tujuan Utama</h5>
+        <p>Proyek ini memiliki beberapa tujuan utama, di antaranya:</p>
+        <ul>
+            <li>
+                <h6><b>Melindungi Garis Pantai dari Abrasi</b></h6>
+                <p>Struktur pagar ini dirancang untuk mengurangi dampak gelombang laut yang menyebabkan erosi tanah di pesisir Bekasi. 
+                    Hal ini diharapkan dapat memperpanjang umur garis pantai sekaligus menjaga ekosistem lokal.</p>
+            </li>
+            <li>
+                <h6><b>Meningkatkan Pendapatan Nelayan</b></h6>
+                <p>Area di sekitar pagar laut akan dijadikan lokasi budidaya kerang hijau dan rumput laut. 
+                    Ini bertujuan untuk memberikan alternatif penghasilan bagi nelayan setempat.</p>
+            </li>
+        </ul>
+        
+
+        <h5>Komponen Proyek</h5>
+        <p>Proyek ini mencakup beberapa aktivitas penting, yaitu:</p>
+        <ul>
+            <li>
+                <h6><b>Pembangunan Pemecah Gelombang</b></h6>
+                <p>Pagar laut ini bertindak sebagai pemecah gelombang untuk meredam kekuatan ombak sebelum mencapai daratan.</p>
+            </li>
+            <li>
+                <h6><b>Penanaman Mangrove</b></h6>
+                <p>Sebagai pelengkap, kawasan pesisir juga akan dihijaukan dengan pohon mangrove untuk memperkuat struktur tanah dan meningkatkan keanekaragaman hayati.</p>
+            </li>
+        </ul>
+
+        <h5>Tanggapan Masyarakat Lokal</h5>
+        <p>Meskipun proyek ini bertujuan baik, beberapa nelayan mengeluhkan kurangnya sosialisasi mengenai dampak dan manfaat proyek ini terhadap aktivitas mereka. Mereka mengungkapkan kekhawatiran bahwa struktur pagar dapat menghambat jalur penangkapan ikan.
+
+            Sebagai respons, pemerintah daerah menyatakan akan meningkatkan komunikasi dengan masyarakat. Sosialisasi tambahan akan dilakukan untuk menjelaskan manfaat proyek ini secara menyeluruh serta memberikan solusi terhadap kekhawatiran yang ada.</p>
+        
+        <h5>Harapan dan Target</h5>
+        <p>Proyek ini diharapkan selesai dalam waktu enam bulan. Pemerintah juga berharap proyek ini dapat menjadi model konservasi pantai yang berkelanjutan dan dapat diterapkan di wilayah lain di Indonesia.</p>
+      </section>
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+
+          
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <div class="card mb-3">
+        <img
+          src="https://akcdn.detik.net.id/community/media/visual/2025/01/09/saifudin-wisatawan-yang-kehilangan-istri-dan-anaknya-dalam-tragedi-laka-maut-kota-batu-1_169.jpeg?w=700&q=90"
+          class="card-img-top"
+          alt="Gambar Berita"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            Tangis Histeris Saifudin Saat Istri-Anak Tewas di Laka Maut Bus Kota
+            Batu
+          </h5>
+          <a
+            target="_blank"
+            href="https://www.detik.com/jatim/berita/d-7724191/tangis-histeris-saifudin-saat-istri-anak-tewas-di-laka-maut-bus-kota-batu"
+            class="btn btn-primary"
+            >Baca Selengkapnya</a
+          >
+        </div>
+      </div>
+      <div class="card mb-3">
+        <img
+          src="https://akcdn.detik.net.id/community/media/visual/2025/01/09/rumah-warga-trenggalek-yang-rusak-gegara-tanah-gerak_169.jpeg?w=700&q=90"
+          class="card-img-top"
+          alt="Gambar Berita"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            Bencana Tanah Gerak Muncul di Desa Nglebo Trenggalek, Ancam 7 Rumah
+          </h5>
+          <a
+            target="_blank"
+            href="https://www.detik.com/jatim/berita/d-7724672/bencana-tanah-gerak-muncul-di-desa-nglebo-trenggalek-ancam-7-rumah"
+            class="btn btn-primary"
+            >Baca Selengkapnya</a
+          >
+        </div>
+      </div>
+      <div class="card mb-3">
+        <img
+          src="https://media.suara.com/pictures/653x366/2025/01/15/11337-kebakaran-terjadi-di-glodok-plaza-jakarta-barat-rabu-1512025-malam.webp"
+          class="card-img-top"
+          alt="Gambar Berita"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            Breaking News! Kebakaran Besar Terjadi di Glodok Plaza, Ada yang Teriak Minta Tolong
+          </h5>
+          <a
+            target="_blank"
+            href="https://www.suara.com/news/2025/01/15/221522/breaking-news-kebakaran-besar-terjadi-di-glodok-plaza-ada-yang-teriak-minta-tolong"
+            class="btn btn-primary"
+            >Baca Selengkapnya</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
