@@ -1,0 +1,89 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Resep Sayur Kacang Merah -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-sayur-kacang-merah.png' %}" alt="Sayur Kacang Merah" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Resep Sayur Kacang Merah: Hidangan Lezat dan Bergizi</h2>
+      <small>Oleh <span class="text-primary">Liputan6</span>, <span class="text-primary">Kuliner</span></small>
+      <hr />
+      <section>
+        <h4>Bahan-bahan:</h4>
+        <ul>
+          <li>250 gram kacang merah, rendam semalaman</li>
+          <li>1 liter air</li>
+          <li>2 siung bawang putih, iris tipis</li>
+          <li>3 siung bawang merah, iris tipis</li>
+          <li>2 cm lengkuas, memarkan</li>
+          <li>2 lembar daun salam</li>
+          <li>1 buah tomat, potong menjadi 4 bagian</li>
+          <li>1 sdm asam jawa, larutkan dengan sedikit air</li>
+          <li>Garam secukupnya</li>
+          <li>Gula pasir secukupnya</li>
+          <li>Penyedap rasa (opsional)</li>
+        </ul>
+
+        <h4>Cara Membuat:</h4>
+        <ol>
+          <li>Tiriskan kacang merah yang telah direndam, kemudian rebus dengan 1 liter air hingga empuk.</li>
+          <li>Panaskan sedikit minyak dalam wajan, tumis bawang putih dan bawang merah hingga harum.</li>
+          <li>Masukkan lengkuas dan daun salam, aduk sebentar hingga layu.</li>
+          <li>Tuangkan tumisan bumbu ke dalam panci berisi kacang merah yang telah direbus. Aduk rata.</li>
+          <li>Tambahkan tomat dan air asam jawa. Biarkan mendidih kembali.</li>
+          <li>Bumbui dengan garam, gula pasir, dan penyedap rasa jika suka. Koreksi rasa sesuai selera.</li>
+          <li>Masak hingga semua bahan matang dan bumbu meresap. Angkat dan sajikan hangat.</li>
+        </ol>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Pelajari cara memasak sayur kacang merah secara lengkap melalui video berikut!</p>
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6051Jb3SDG4?si=vWZRz_KQPWrecr7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+        <h4>Berita Lainnya</h4>
+        <!-- Berita 1 -->
+        <div class="card mb-3">
+          <img src="https://cdn0-production-images-kly.akamaized.net/4ugXtyMPY5WHErerCYiO4kO2fYw=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4891425/original/012530600_1720962009-fotor-ai-20240714195345.jpg  " class="card-img-top" alt="Gambar Berita">
+          <div class="card-body">
+            <h5 class="card-title">Ahli Kesehatan: Obesitas Tak Lagi Ditentukan oleh Indeks Massa Tubuh</h5>
+            <a target="_blank" href="https://www.liputan6.com/global/read/5882339/ahli-kesehatan-obesitas-tak-lagi-ditentukan-oleh-indeks-massa-tubuh" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
+        </div>
+        <!-- Berita 2 -->
+        <div class="card mb-3">
+          <img src="https://cdn1-production-images-kly.akamaized.net/-wzte7nOhul4BWUnVbBVZsJmcUQ=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5089136/original/065090600_1736515331-1736514559183_fungsi-klorida.jpg" class="card-img-top" alt="Gambar Berita">
+          <div class="card-body">
+            <h5 class="card-title">Fungsi Klorida: Peran Penting dalam Tubuh dan Kesehatan</h5>
+            <a target="_blank" href="https://www.liputan6.com/feeds/read/5875679/fungsi-klorida-peran-penting-dalam-tubuh-dan-kesehatan" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
+        </div>
+        <!--Berita 3-->
+        <div class="card mb-3">
+          <img src="https://cdn0-production-images-kly.akamaized.net/otS6xEkHC_KPsBq7uBFVKQ0R1kw=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5093989/original/008565900_1736839755-1736837346168_cara-cetak-kartu-bpjs-kesehatan.jpg" class="card-img-top" alt="Gambar Berita">
+          <div class="card-body">
+            <h5 class="card-title">Cara Cetak Kartu BPJS Kesehatan: Panduan Lengkap dan Mudah</h5>
+            <a target="_blank" href="https://www.liputan6.com/feeds/read/5880968/cara-cetak-kartu-bpjs-kesehatan-panduan-lengkap-dan-mudah" class="btn btn-primary">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+{% endblock %}

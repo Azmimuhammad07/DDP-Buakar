@@ -1,0 +1,87 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Artikel Teknik Informatika -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-teknik-informatika.png' %}" alt="Teknik Informatika" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Teknik Informatika Belajar Apa: Panduan Lengkap untuk Calon Mahasiswa</h2>
+      <small>Oleh <span class="text-primary">Liputan6</span>, <span class="text-primary">Pendidikan</span></small>
+      <hr />
+      <section>
+        <p>
+          Teknik Informatika adalah bidang studi yang mempelajari pengembangan dan penerapan teknologi informasi, sistem komputer, dan perangkat lunak. Program ini dirancang untuk menghasilkan lulusan yang kompeten dalam merancang, mengembangkan, dan mengelola sistem informasi yang kompleks.
+        </p>
+        <h4>Kurikulum dan Mata Kuliah Utama</h4>
+        <p>
+          Mahasiswa Teknik Informatika akan mempelajari berbagai mata kuliah, antara lain:
+        </p>
+        <ul>
+          <li><strong>Algoritma dan Pemrograman:</strong> Dasar-dasar logika pemrograman dan teknik penulisan kode.</li>
+          <li><strong>Struktur Data:</strong> Pengorganisasian dan pengelolaan data secara efisien.</li>
+          <li><strong>Basis Data:</strong> Desain dan manajemen sistem basis data.</li>
+          <li><strong>Jaringan Komputer:</strong> Prinsip dan praktik jaringan serta komunikasi data.</li>
+          <li><strong>Rekayasa Perangkat Lunak:</strong> Metodologi pengembangan perangkat lunak yang efektif.</li>
+          <li><strong>Kecerdasan Buatan:</strong> Konsep dan aplikasi AI dalam berbagai bidang.</li>
+          <li><strong>Keamanan Informasi:</strong> Strategi untuk melindungi data dan sistem dari ancaman.</li>
+        </ul>
+        <h4>Prospek Karir</h4>
+        <p>
+          Lulusan Teknik Informatika memiliki peluang karir yang luas, termasuk menjadi:
+        </p>
+        <ul>
+          <li>Software Developer</li>
+          <li>System Analyst</li>
+          <li>Network Engineer</li>
+          <li>Data Scientist</li>
+          <li>Cybersecurity Specialist</li>
+        </ul>
+        <p>
+          Dengan perkembangan teknologi yang pesat, kebutuhan akan profesional di bidang ini terus meningkat, menjadikan Teknik Informatika sebagai pilihan studi yang menjanjikan.
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Pelajari lebih lanjut tentang Teknik Informatika melalui video berikut!</p>
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5lWlxRmHzXg?si=UIea-A-QZeVJSMxb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Artikel Terkait</h4>
+      <!-- Artikel 1 -->
+      <div class="card mb-3">
+        <img src="https://dashboard.primakara.ac.id/uploads/pekerjaan_informatika_7bc0b3588b.png" class="card-img-top" alt="Prospek Karir Teknik Informatika">
+        <div class="card-body">
+          <h5 class="card-title">Prospek Karir Lulusan Teknik Informatika</h5>
+          <a target="_blank" href="https://primakara.ac.id/blog/tips-kuliah/pekerjaan-informatika#:~:text=Sebenarnya%20ada%20banyak%20sekali%20peluang,dan%20masih%20b" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Artikel 2 -->
+      <div class="card mb-3">
+        <img src="https://cdn.medcom.id/dynamic/content/2022/08/21/1466409/jP5fYhJIkX.jpg?w=1024" class="card-img-top" alt="Tips Sukses di Teknik Informatika">
+        <div class="card-body">
+          <h5 class="card-title">Tips Sukses Menjalani Studi Teknik Informatika</h5>
+          <a target="_blank" href="https://www.medcom.id/pendidikan/tips-pendidikan/nbwD3P5k-tips-sukses-karier-bagi-mahasiswa-jurusan-it" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

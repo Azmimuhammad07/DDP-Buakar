@@ -1,0 +1,79 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita Pagar Laut di Tangerang Belum Dibongkar -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-pagar-laut.png' %}" alt="Pagar Laut di Tangerang" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Pagar Laut di Tangerang Belum Dibongkar, Menteri ATR: Kami Menunggu Laporan</h2>
+      <small>Oleh <span class="text-primary">Liputan6</span>, <span class="text-primary">News</span></small>
+      <hr />
+      <section>
+        <p>
+          Menteri Agraria dan Tata Ruang/Kepala Badan Pertanahan Nasional (ATR/BPN), Nusron Wahid, menjelaskan bahwa pihaknya belum dapat mengambil tindakan terkait pagar laut sepanjang 30,16 kilometer di perairan Kabupaten Tangerang, Banten. Menurut Nusron, pemerintah belum menerima laporan resmi mengenai keberadaan pagar tersebut. 
+        </p>
+        <p>
+          Nusron mengibaratkan situasi ini seperti menangkap pencuri sebelum tindakan pencurian terjadi. Ia menegaskan bahwa pemerintah harus bertindak berdasarkan legal standing dan legal formil, serta mengedepankan asas praduga tak bersalah. 
+        </p>
+        <p>
+          Kementerian Kelautan dan Perikanan (KKP) sebelumnya telah menyegel pagar laut tersebut dan memberikan waktu 20 hari kepada pihak yang bertanggung jawab untuk melapor. Jika dalam kurun waktu tersebut tidak ada yang mengklaim kepemilikan, KKP akan membongkar pagar secara paksa. 
+        </p>
+        <p>
+          Ombudsman RI juga telah meninjau lokasi dan meminta agar pagar laut segera dibongkar karena dianggap mengganggu aktivitas nelayan dan berpotensi melanggar aturan tata ruang. 
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Saksikan video berikut untuk mendapatkan informasi lengkap tentang berita ini!</p>
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/h7hFJx7V07c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+      <div class="card mb-3">
+        <img src="https://cdn1-production-images-kly.akamaized.net/pyAE-KSURb8yMin-9pfb39McJaM=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4312938/original/005333900_1675423535-FOTO.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Sentilan Luhut ke Pengkritik Program Makan Bergizi Gratis</h5>
+          <a target="_blank" href="https://www.liputan6.com/bisnis/read/5882507/sentilan-luhut-ke-pengkritik-program-makan-bergizi-gratis" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://cdn1-production-images-kly.akamaized.net/2xbfSsPQ9-5Fg5RZ-j_iVjVGJR8=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4477887/original/010773400_1687477107-Harga_Minyak_Dunia_Freepik.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Harga Minyak Dunia Hari Ini: Brent Turun, WTI Merosot</h5>
+          <a target="_blank" href="https://www.liputan6.com/bisnis/read/5881820/harga-minyak-dunia-hari-ini-brent-turun-wti-merosot" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+
+      <!--Berita 3-->
+      <div class="card mb-3">
+        <img src="https://cdn1-production-images-kly.akamaized.net/64_iqHs68xTnJbUuQxxnY0qXF1I=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4477896/original/072602400_1687478218-Miliarder_atau_Orang_Terkaya_Dunia.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Terkuak, 10 Juta Orang Kaya Masih Gemar Belanja di Luar Negeri</h5>
+          <a target="_blank" href="https://www.liputan6.com/bisnis/read/5882807/terkuak-10-juta-orang-kaya-masih-gemar-belanja-di-luar-negeri" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita Program Makan Bergizi Gratis -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-makan-siang.png' %}" alt="Header Image" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Program Makan Bergizi Gratis Dorong Konsumsi Tahu dan Tempe</h2>
+      <small>Oleh <span class="text-primary">Detik Finance</span>, <span class="text-primary">Detik News</span>, <span class="text-primary">Kompas Money</span>, <span class="text-primary">Tempo</span>, <span class="text-primary">Kompas TV</span></small>
+      <hr />
+      <section>
+        <p>
+          Pemerintah Indonesia tengah mendorong program Makan Bergizi Gratis (MBG) dengan memasukkan tahu dan tempe sebagai menu utama. Menteri Koperasi dan UKM, Budi Arie, menyatakan bahwa langkah ini bertujuan untuk memenuhi kebutuhan gizi masyarakat sekaligus meningkatkan potensi ekonomi pengrajin tahu dan tempe di Indonesia. 
+        </p>
+        <p>
+          Program MBG diharapkan menjadi berkah bagi para pengrajin tahu dan tempe, membuka peluang mereka menjadi pemasok utama dalam program ini. Gakoptindo, organisasi yang menaungi pengrajin tahu dan tempe, berkomitmen untuk menyuplai produk mereka demi kesuksesan program ini, meskipun dukungan dari pemerintah sangat dibutuhkan.
+        </p>
+        <p>
+          Namun, implementasi program ini menghadapi tantangan. Beberapa siswa menunjukkan ketidaksukaan terhadap menu tahu dan tempe, sehingga diperlukan variasi dan kreativitas dalam penyajian menu agar lebih menarik bagi anak-anak. Menteri Perdagangan, Zulkifli Hasan, menekankan bahwa menu MBG harus disesuaikan dengan preferensi pangan di setiap daerah. Misalnya, di Lampung, ikan mungkin lebih disukai, sementara di Jawa, tahu dan tempe menjadi pilihan utama.
+        </p>
+        <p>
+          Juru Bicara Kantor Komunikasi Presiden menyatakan bahwa susu dalam program MBG bersifat opsional dan dapat digantikan dengan sumber protein lain seperti tahu dan tempe. Pemerintah juga memastikan bahwa sosialisasi program MBG akan menjangkau hingga pelosok negeri, sehingga semua anak dapat menikmati manfaatnya.
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Saksikan video berikut untuk mendapatkan informasi lengkap tentang berita ini!</p>
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cjXYByNerR4?si=XNZIs1v31v7vbh-_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+      <div class="card mb-3">
+        <img src="https://akcdn.detik.net.id/visual/2019/07/24/529e5b9e-bad8-413f-a758-cc24ed2e1292_169.jpeg?w=650&q=90" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Sekjen Gerindra hingga KSP Buka Suara soal Pertemuan Prabowo-Megawati</h5>
+          <a target="_blank" href="https://www.cnnindonesia.com/nasional/20250115201504-32-1187644/sekjen-gerindra-hingga-ksp-buka-suara-soal-pertemuan-prabowo-megawati" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://akcdn.detik.net.id/visual/2024/08/22/penutupan-munas-xi-partai-golkar-1_169.jpeg?w=650&q=90" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Ormas Golkar MKGR Siapkan Tempat untuk Jokowi, Singgung Peluang Gabung/</h5>
+          <a target="_blank" href="https://www.cnnindonesia.com/nasional/20250115180940-32-1187580/ormas-golkar-mkgr-siapkan-tempat-untuk-jokowi-singgung-peluang-gabung" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+
+      <!-- Berita 3 -->
+      <div class="card mb-3">
+        <img src="https://pict.sindonews.net/dyn/732/pena/news/2025/01/14/14/1516235/5-risiko-jadi-anggota-kopassus-hanya-untuk-prajurit-yang-bermental-baja-dct.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">5 Risiko Jadi Anggota Kopassus, Hanya untuk Prajurit yang Bermental Baja</h5>
+          <a target="_blank" href="https://nasional.sindonews.com/read/1516235/14/5-risiko-jadi-anggota-kopassus-hanya-untuk-prajurit-yang-bermental-baja-1736845288" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

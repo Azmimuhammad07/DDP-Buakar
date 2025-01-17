@@ -1,0 +1,94 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita Raffi Ahmad -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-raffi-ahmad.png' %}" alt="Header Image" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Raffi Ahmad Patwal Mobil RI 36, 'Nggak Bermaksud Arogan'</h2>
+      <small>Oleh <span class="text-primary">CNN Indonesia</span> & <span class="text-primary">Tempo.co</span>, 15 Januari 2025</small>
+      <hr />
+      <section>
+        <p>
+          Raffi Ahmad, seorang selebritas dan Utusan Khusus Presiden Bidang Pembinaan Generasi Muda dan Pekerja Seni, memberikan klarifikasi terkait insiden pengawalan mobil berpelat RI 36 miliknya yang viral di media sosial. Ia menegaskan bahwa petugas patroli dan pengawalan (patwal) tidak bermaksud bersikap arogan selama menjalankan tugasnya.
+        </p>
+        <p>
+          Dalam pernyataannya, Raffi menjelaskan bahwa pengawalan tersebut merupakan prosedur standar yang diterapkan untuk memastikan keamanan dan kelancaran perjalanan, meskipun dirinya tidak berada di dalam kendaraan pada saat itu. Ia juga menyatakan bahwa tidak ada niat untuk mengintimidasi atau mengganggu pengguna jalan lain.
+        </p>
+        <p>
+          Sebelumnya, insiden ini mendapat perhatian publik setelah video yang menunjukkan perilaku petugas patwal yang dianggap arogan saat mengawal mobil RI 36 beredar luas. Menanggapi hal tersebut, pihak Istana melalui Sekretaris Kabinet Mayor Teddy telah memberikan teguran kepada tim patwal yang terlibat.
+        </p>
+        <p>
+          Raffi Ahmad menyampaikan permohonan maaf atas ketidaknyamanan yang ditimbulkan dan berjanji akan lebih berhati-hati dalam pelaksanaan pengawalan di masa mendatang. Ia berharap kejadian ini dapat menjadi pembelajaran bagi semua pihak untuk menjaga etika dan profesionalisme dalam bertugas.
+        </p>
+        <p>
+          Sementara itu, petugas patwal yang sebelumnya dikenai sanksi disiplin telah kembali bertugas setelah menjalani proses evaluasi. Pihak kepolisian menegaskan komitmennya untuk terus meningkatkan kualitas layanan dan memastikan bahwa tindakan serupa tidak terulang di kemudian hari.
+        </p>
+        <p>
+          Insiden ini juga memicu diskusi di kalangan masyarakat mengenai penggunaan fasilitas negara oleh pejabat publik dan pentingnya transparansi serta akuntabilitas dalam menjalankan tugas resmi. Beberapa pihak mengusulkan agar prosedur pengawalan bagi pejabat ditinjau ulang untuk mencegah kesalahpahaman dan menjaga kepercayaan publik.
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+<div class="card my-5 shadow-lg border-0">
+    <div class="card-body text-center">
+      <h4 class="card-title">Tonton Video Terkait</h4>
+      <p class="card-text">Saksikan video berikut untuk mendapatkan informasi lengkap tentang berita ini!</p>
+      <div class="ratio ratio-16x9">
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/WHI-ltdb6nY?si=xUvkTTj8zPq-1n66" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+  
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+
+      <div class="card mb-3">
+        <img src="https://cdn0-production-images-kly.akamaized.net/mvD3fwLD4-NhIh2SuC6P1vS4A90=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5091924/original/058305300_1736744174-IMG-20250113-WA0066.jpg">
+        <div class="card-body">
+          <h5 class="card-title">Sekjen Gerindra Sebut Baznas Tak Masalah Zakat Digunakan untuk Makan Bergizi Gratis</h5>
+          <a target="_blank" href="https://www.liputan6.com/news/read/5882850/sekjen-gerindra-sebut-baznas-tak-masalah-zakat-digunakan-untuk-makan-bergizi-gratis" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <img src="https://cdn0-production-images-kly.akamaized.net/5SeKYShE6d4n0juFJSnnJKze_bI=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5095672/original/011768900_1736938368-IMG_4958.jpeg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Sekjen Gerindra Akui Sudah Bertemu Megawati, Ini yang Dibahas</h5>
+          <a target="_blank" href="https://www.liputan6.com/news/read/5882616/sekjen-gerindra-akui-sudah-bertemu-megawati-ini-yang-dibahas" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://cdn1-production-images-kly.akamaized.net/wIH62HjBBTqr4DwEEa9A12LPhr8=/640x853/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5095950/original/084027100_1736956832-WhatsApp_Image_2025-01-15_at_22.52.10.jpeg" class="card-img-top" alt="Gambar Berita"  height="170rem">
+        <div class="card-body">
+          <h5 class="card-title">Kebakaran Glodok Plaza, Api Diduga Berasal dari Diskotek Lantai 7</h5>
+          <a target="_blank" href="https://www.liputan6.com/news/read/5882910/kebakaran-glodok-plaza-api-diduga-berasal-dari-diskotek-lantai-7" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

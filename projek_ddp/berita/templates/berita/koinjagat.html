@@ -1,0 +1,83 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Artikel Kontroversi Koin Jagat -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-koin-jagat.png' %}" alt="Koin Jagat" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>6 Kontroversi Koin Jagat yang Bikin Resah, Berdampak Rusak Fasilitas Umum</h2>
+      <small>Oleh <span class="text-primary">Liputan6</span>, <span class="text-primary">Hot</span></small>
+      <hr />
+      <section>
+        <p>
+          Fenomena Koin Jagat belakangan ini menjadi perbincangan hangat di kalangan masyarakat. Meskipun menawarkan keseruan dan hadiah menarik, permainan ini juga menimbulkan kontroversi karena dampak negatifnya terhadap fasilitas umum dan ketertiban masyarakat.
+        </p>
+        <h4>1. Kerusakan Fasilitas Umum</h4>
+        <p>
+          Aktivitas berburu Koin Jagat dilaporkan menyebabkan kerusakan pada fasilitas umum di berbagai daerah. Para pemain yang terlalu antusias seringkali tidak memperhatikan lingkungan sekitar, sehingga merusak properti publik. 
+        <h4>2. Gangguan Ketertiban Umum</h4>
+        <p>
+          Kerumunan pemain yang berkumpul di satu lokasi untuk mencari koin seringkali mengganggu ketertiban umum. Hal ini menimbulkan keresahan bagi masyarakat sekitar yang merasa terganggu dengan keramaian yang tidak terkontrol.
+        </p>
+        <h4>3. Potensi Bahaya Keselamatan</h4>
+        <p>
+          Beberapa insiden dilaporkan terjadi akibat kurangnya perhatian terhadap keselamatan saat berburu koin. Pemain yang terlalu fokus pada permainan dapat membahayakan diri sendiri dan orang lain, terutama di area dengan lalu lintas padat.
+        </p>
+        <h4>4. Penyalahgunaan Teknologi</h4>
+        <p>
+          Meskipun aplikasi Jagat menawarkan inovasi dalam teknologi, penggunaannya yang tidak terkontrol dapat menyebabkan penyalahgunaan. Beberapa pihak khawatir data pribadi pengguna dapat disalahgunakan oleh oknum yang tidak bertanggung jawab.
+        </p>
+        <h4>5. Dampak Lingkungan</h4>
+        <p>
+          Aktivitas berburu koin yang masif dapat berdampak negatif pada lingkungan. Sampah yang ditinggalkan oleh pemain dan kerusakan pada taman atau area hijau menjadi perhatian bagi aktivis lingkungan.
+        </p>
+        <h4>6. Reaksi Pemerintah Daerah</h4>
+        <p>
+          Beberapa pemerintah daerah telah mengambil tindakan dengan melarang aktivitas berburu Koin Jagat di wilayah mereka. Langkah ini diambil untuk menjaga ketertiban dan mencegah kerusakan lebih lanjut pada fasilitas umum. 
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Pelajari lebih lanjut tentang kontroversi Koin Jagat melalui video berikut!</p>
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lJM3lba6CWs?si=DpLcJYLISjdTohE1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Artikel Terkait</h4>
+      <!-- Artikel 1 -->
+      <div class="card mb-3">
+        <img src="https://statik.tempo.co/data/2025/01/13/id_1369010/1369010_720.jpg" class="card-img-top" alt="Koin Jagat dan Dampaknya">
+        <div class="card-body">
+          <h5 class="card-title">Mengenal Koin Jagat dan Dampaknya pada Masyarakat</h5>
+          <a target="_blank" href="https://www.tempo.co/ekonomi/mengenal-koin-jagat-yang-bikin-heboh-pemburu-rusak-taman-sampai-congkel-tegel--1193511" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Artikel 2 -->
+      <div class="card mb-3">
+        <img src="https://statik.tempo.co/data/2025/01/15/id_1369485/1369485_720.jpg" class="card-img-top" alt="Pemerintah dan Koin Jagat">
+        <div class="card-body">
+          <h5 class="card-title">Pemerintah Daerah Menanggapi Fenomena Koin Jagat</h5>
+          <a target="_blank" href="https://www.tempo.co/politik/pj-gubernur-jakarta-dan-wali-kota-bandung-soroti-perburuan-koin-jagat-di-daerahnya-1194466" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
