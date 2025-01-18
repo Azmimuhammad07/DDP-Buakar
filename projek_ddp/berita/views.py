@@ -29,9 +29,29 @@ def informatika(request):
     return render(request, 'berita/informatika.html')
 def exchange_rate(request):
     return render(request, 'berita/exchange_rate.html')
-
 def koinjagat(request):
     return render(request, 'berita/koinjagat.html')
+def kalori(request):
+    return render(request, 'kalori.html')
+def otot(request):
+    return render(request, 'otot.html')
+
+def olahraga(request):
+    return render(request, 'olahraga/olahraga.html')
+def arsenal_krisis_stiker(request):
+    return render(request, 'olahraga/arsenal_krisis_striker.html')
+def prediksi_squad_timnas(request):
+    return render(request, 'olahraga/prediksi_squad_timnas.html')
+def maguire(request):
+    return render(request, 'olahraga/maguire.html')
+def pep_guardiola(request):
+    return render(request, 'olahraga/pep_guardiola.html')
+def nottingham(request):
+    return render(request, 'olahraga/nottingham.html')
+def bulutangkis(request):
+    return render(request, 'olahraga/bulutangkis.html')
+
+
 
 
 def exchange_rate(request):

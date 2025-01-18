@@ -1,0 +1,81 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita Nottingham Forest -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-nottingham.png' %}" alt="Nottingham Forest" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Nottingham Forest Anteng di Tiga Besar Liga Inggris</h2>
+      <small>Oleh <span class="text-primary">Detik Sport</span>, <span class="text-primary">Liga Inggris</span></small>
+      <hr />
+      <section>
+        <p>
+          Nottingham Forest masih nyaman berada di posisi ketiga klasemen Liga Inggris dengan raihan 41 poin dari 21 pertandingan. Mereka hanya terpaut enam poin dari Liverpool yang berada di puncak klasemen dengan 20 laga.
+        </p>
+        <p>
+          Tim asuhan Nuno Espirito Santo ini awalnya tidak diperhitungkan untuk berada di papan atas. Musim lalu, mereka bahkan nyaris terdegradasi dan finis di posisi ke-17.
+        </p>
+
+        <h3>Awal Musim yang Solid</h3>
+        <p>
+          Musim 2024/2025 dimulai dengan baik bagi Nottingham Forest. Mereka tidak terkalahkan dalam lima laga awal dengan dua kemenangan dan tiga hasil imbang. Puncaknya, mereka memenangkan enam pertandingan berturut-turut dari matchday ke-15 hingga ke-20.
+        </p>
+
+        <blockquote>
+          <p>"Kami cuma ingin finis setinggi mungkin. Sebelum musim dimulai, banyak yang bilang kami akan berjuang melawan degradasi. Kini kami berada di momentum bagus," ujar kiper Matz Sels kepada BBC.</p>
+        </blockquote>
+
+        <h3>Menjaga Momentum</h3>
+        <p>
+          Nottingham Forest mulai dijuluki sebagai kuda hitam musim ini. Mereka berhasil mengalahkan Liverpool sekali dan menahan imbang sekali, menjinakkan Tottenham dan Manchester United, serta menahan imbang Chelsea.
+        </p>
+        <p>
+          Meski begitu, para pemain dan manajemen tetap realistis. "Kami tidak membicarakan soal menjadi penantang gelar. Fokus kami adalah menjalani pertandingan demi pertandingan dan meraih hasil maksimal," tutup Sels.
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Saksikan video berikut untuk mendapatkan informasi lengkap tentang berita ini!</p>
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LFXHQRHuh4c?si=aehgNkVB4LgU5oPx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+      <div class="card mb-3">
+        <img src="https://asset.kompas.com/crops/Vw3onXFjerXAEK9iIGYAY4PpRDg=/1x0:1024x682/1200x800/data/photo/2025/01/12/6782bb27c3a9a.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Patrick Kluivert Menginjak Tanah Air, Anaknya "Menggila" di Piala FA</h5>
+          <a target="_blank" href="https://bola.kompas.com/read/2025/01/12/01461778/patrick-kluivert-menginjak-tanah-air-anaknya-menggila-di-piala-fa" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://asset.kompas.com/crops/dCbmEy6SSOcmRU4OIExFK1PnFHo=/104x4:924x550/1200x800/data/photo/2025/01/16/6788334b8a799.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Barcelona Hancurkan Real Betis, Lamine Yamal Brilian, Pedri Fantastis</h5>
+          <a target="_blank" href="https://bola.kompas.com/read/2025/01/16/17000098/barcelona-hancurkan-real-betis-lamine-yamal-brilian-pedri-fantastis" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita Pep Guardiola -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-pep-guardiola.png' %}" alt="Pep Guardiola" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Pep Guardiola Harus Menjilat Ludahnya Sendiri</h2>
+      <small>Oleh <span class="text-primary">Detik Sport</span>, <span class="text-primary">Liga Inggris</span></small>
+      <hr />
+      <section>
+        <p>
+          Pep Guardiola harus menjilat ludahnya sendiri. Awalnya ia menolak belanja pemain di musim panas lalu, namun kini Manchester City dihantam badai cedera dan membutuhkan tambahan pemain baru secepatnya.
+        </p>
+        <p>
+          Manchester City menghadapi badai cedera hingga pertengahan musim 2024/2025. Dimulai dari Rodri yang cedera di awal musim, situasi ini membuat lini tengah City kesulitan hingga menjadi sasaran empuk bagi tim lawan.
+        </p>
+        <p>
+          Menurut data Transfermarkt, ada 15 jenis cedera yang dialami para pemain Manchester City. Selain Rodri, pemain lain seperti Ruben Dias, John Stones, Kyle Walker, hingga Oscar Bobb juga sempat cedera atau belum kembali ke performa terbaiknya.
+        </p>
+
+        <h3>City Bergerak di Bursa Transfer</h3>
+        <p>
+          The Citizens kini bergerak aktif mencari pemain baru. Beberapa nama yang diyakini akan segera bergabung adalah dua bek muda Abdukodir Khusanov (20 tahun) dan Vitor Reis (19 tahun), gelandang tengah Douglas Luiz, serta striker Omar Marmoush.
+        </p>
+
+        <blockquote>
+          <p>"Musim panas kemarin ketika klub mempertimbangkan beli pemain baru, saya bilang 'tidak, saya tidak butuh'. Saya percaya dengan skuad yang ada," ungkap Guardiola dilansir dari Mirror.</p>
+        </blockquote>
+
+        <h3>Penyesalan Guardiola</h3>
+        <p>
+          Kini Guardiola mengakui bahwa keputusannya tersebut kurang tepat. "Savio baru saja masuk dan Guendogan sudah kembali, tapi kemudian malah tidak terduga ada di situasi sekarang ini," tambahnya.
+        </p>
+        <p>
+          Meski begitu, Guardiola tetap fokus membawa Manchester City bangkit dan kembali bersaing di papan atas Liga Inggris.
+        </p>
+
+        <p>
+          "Tim yang saya punya sudah sangat bagus. Kami punya bek tengah, bek sayap, dan semua pemain yang luar biasa. Jika kami tidak bagus, kami tidak akan mencapai apa yang sudah kami raih di musim-musim lalu," tutupnya.
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Saksikan video berikut untuk mendapatkan informasi lengkap tentang berita ini!</p>
+          <div class="ratio ratio-16x9">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/example" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+      <div class="card mb-3">
+        <img src="https://asset.kompas.com/crops/2QZc16m-Ih9hLqYGsnZHs_LnNTE=/13x0:724x474/1200x800/data/photo/2025/01/10/6780878b6ada3.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Man City Cari Pengganti Rodri, Gelandang Lazio Jadi Target Utama</h5>
+          <a target="_blank" href="https://bola.kompas.com/read/2025/01/10/09381448/man-city-cari-pengganti-rodri-gelandang-lazio-jadi-target-utama" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://cdns.klimg.com/bola.net/resized/810x540/library/upload/21/2024/02/996x664/kyle-walker_464d615.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Dikonfirmasi Guardiola, Kyle Walker Ingin Tinggalkan Man City</h5>
+          <a target="_blank" href="https://www.bola.net/inggris/dikonfirmasi-guardiola-kyle-walker-ingin-tinggalkan-man-city-a26990.html" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

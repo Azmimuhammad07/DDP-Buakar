@@ -1,0 +1,66 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Kalkulator Massa Otot</h1>
+
+  <div class="card mx-auto" style="max-width: 600px;">
+    <div class="card-body">
+      <form id="muscleForm">
+        <div class="mb-3">
+          <label for="gender" class="form-label">Jenis Kelamin</label>
+          <select class="form-select" id="gender" required>
+            <option value="">Pilih jenis kelamin</option>
+            <option value="male">Laki-laki</option>
+            <option value="female">Perempuan</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="weight" class="form-label">Berat Badan (kg)</label>
+          <input type="number" step="0.1" class="form-control" id="weight" placeholder="Masukkan berat badan Anda" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="height" class="form-label">Tinggi Badan (cm)</label>
+          <input type="number" step="0.1" class="form-control" id="height" placeholder="Masukkan tinggi badan Anda" required>
+        </div>
+
+        <button type="button" id="calculateMuscle" class="btn btn-primary w-100">Hitung Massa Otot</button>
+      </form>
+
+      <div id="resultContainer" class="alert alert-success mt-4" style="display: none;">
+        <h4 class="alert-heading">Hasil Perhitungan:</h4>
+        <p id="result"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("calculateMuscle").addEventListener("click", function () {
+    const gender = document.getElementById("gender").value;
+    const weight = parseFloat(document.getElementById("weight").value);
+    const height = parseFloat(document.getElementById("height").value);
+
+    if (!gender || isNaN(weight) || isNaN(height)) {
+      alert("Mohon isi semua bidang!");
+      return;
+    }
+
+    // Menghitung Lean Body Mass (LBM) berdasarkan Boer Formula
+    let lbm;
+    if (gender === "male") {
+      lbm = (0.407 * weight) + (0.267 * height) - 19.2;
+    } else if (gender === "female") {
+      lbm = (0.252 * weight) + (0.473 * height) - 48.3;
+    }
+
+    // Menampilkan hasil
+    document.getElementById("result").innerText = `Massa tubuh tanpa lemak Anda: ${lbm.toFixed(2)} kg.`;
+    document.getElementById("resultContainer").style.display = "block";
+  });
+</script>
+
+{% endblock %}

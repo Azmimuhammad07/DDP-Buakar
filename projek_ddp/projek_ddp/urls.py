@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from berita.views import *
+from django.urls import path
+
+
+
+    
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,8 +39,16 @@ urlpatterns = [
     path('berita/sayur/', sayur, name='sayur'),
     path('berita/informatika/', informatika, name='informatika'),
     path('berita/koinjagat/', koinjagat, name='koinjagat'),
-     path('exchange_rate/', exchange_rate, name='exchange_rate'),
-
+    path('exchange_rate/', exchange_rate, name='exchange_rate'), 
+    path('kalori', kalori, name='kalori'),
+    path('otot', otot, name='otot'),
+    path('olahraga', olahraga, name='olahraga'),
+    path('arsenal-krisis-striker', arsenal_krisis_stiker, name='arsenal_krisis_striker'),
+    path('prediksi_squad_timnas', prediksi_squad_timnas, name='prediksi_squad_timnas'),
+    path('maguire', maguire, name='maguire'),
+    path('pep_guardiola', pep_guardiola, name='pep_guardiola'),
+    path('nottingham', nottingham, name='nottingham'),
+    path('bulutangkis', bulutangkis, name='bulutangkis'),
 
 
     path('kurs/', exchange_rate, name='exchange_rate'),
