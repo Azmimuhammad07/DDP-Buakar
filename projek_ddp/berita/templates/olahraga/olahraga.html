@@ -1,32 +1,6 @@
 {% extends 'index.html' %}
 {% block content %}
 {% load static %}
-
-<!-- Pop-up Modal -->
-<div class="modal fade" id="currencyModal" tabindex="-1" aria-labelledby="currencyModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="currencyModalLabel">Kurs Penukaran Uang Hari Ini</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p><strong>Selamat datang!</strong> Temukan kurs penukaran uang terbaik hari ini hanya untuk Anda!</p>
-                <ul>
-                    <li>1 USD = 15,000 IDR</li>
-                    <li>1 EUR = 16,500 IDR</li>
-                    <li>1 GBP = 18,200 IDR</li>
-                </ul>
-                <p>Jangan lewatkan kesempatan untuk mendapatkan nilai tukar terbaik. Klik tombol di bawah untuk informasi lebih lanjut!</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                <a href="{% url 'exchange_rate' %}" class="btn btn-primary">Lihat Detail</a>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100" style="padding: 0; margin: 0;">
     <div class="card mb-4" style="width: 100%; border: none;">
         <div id="carouselExampleCaptions" class="carousel slide">
@@ -266,19 +240,4 @@
 }
 
 </style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Referensi ke modal
-        var currencyModal = new bootstrap.Modal(document.getElementById('currencyModal'));
-
-        // Tampilkan modal saat pertama kali halaman dimuat
-        currencyModal.show();
-
-        // Tampilkan modal setiap 20 detik setelah itu
-        setInterval(function () {
-            currencyModal.show();
-        }, 60000); // 1 menit
-    });
-</script>
 {% endblock %}

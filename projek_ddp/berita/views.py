@@ -1,6 +1,6 @@
 from django.shortcuts import render
-
-
+from .forms import CalorieForm
+from .forms import MuscleForm
 
 # Create your views here.
 def home(request):
@@ -31,11 +31,6 @@ def exchange_rate(request):
     return render(request, 'berita/exchange_rate.html')
 def koinjagat(request):
     return render(request, 'berita/koinjagat.html')
-def kalori(request):
-    return render(request, 'kalori.html')
-def otot(request):
-    return render(request, 'otot.html')
-
 def olahraga(request):
     return render(request, 'olahraga/olahraga.html')
 def arsenal_krisis_stiker(request):
@@ -50,10 +45,6 @@ def nottingham(request):
     return render(request, 'olahraga/nottingham.html')
 def bulutangkis(request):
     return render(request, 'olahraga/bulutangkis.html')
-
-
-
-
 def exchange_rate(request):
     exchange_result = None
 
@@ -90,3 +81,49 @@ def exchange_rate(request):
                 exchange_result = 'Input tidak valid.'
     
     return render(request, 'exchange_rate.html', {'exchange_result': exchange_result})
+def calculate_calories(request):
+    result = None
+
+    if request.method == "POST":
+        form = CalorieForm(request.POST)
+        if form.is_valid():
+            gender = form.cleaned_data['gender']
+            age = form.cleaned_data['age']
+            weight = form.cleaned_data['weight']
+            height = form.cleaned_data['height']
+            activity_level = float(form.cleaned_data['activity_level'])
+
+            # Hitung BMR (Basal Metabolic Rate) menggunakan rumus Mifflin-St Jeor
+            if gender == "male":
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5
+            elif gender == "female":
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161
+
+            # Hitung kebutuhan kalori harian
+            daily_calories = bmr * activity_level
+            result = f"Kebutuhan kalori harian Anda: {daily_calories:.2f} kalori."
+    else:
+        form = CalorieForm()
+
+    return render(request, 'calculate_calories.html', {'form': form, 'result': result})
+def calculate_muscle(request):
+    result = None
+
+    if request.method == "POST":
+        form = MuscleForm(request.POST)
+        if form.is_valid():
+            gender = form.cleaned_data["gender"]
+            weight = form.cleaned_data["weight"]
+            height = form.cleaned_data["height"]
+
+            # Hitung Lean Body Mass (LBM) berdasarkan Boer Formula
+            if gender == "male":
+                lbm = (0.407 * weight) + (0.267 * height) - 19.2
+            elif gender == "female":
+                lbm = (0.252 * weight) + (0.473 * height) - 48.3
+
+            result = f"Massa tubuh tanpa lemak Anda: {lbm:.2f} kg."
+    else:
+        form = MuscleForm()
+
+    return render(request, "calculate_muscle.html", {"form": form, "result": result})

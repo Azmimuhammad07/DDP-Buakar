@@ -19,10 +19,6 @@ from django.urls import path
 from berita.views import *
 from django.urls import path
 
-
-
-    
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
@@ -40,8 +36,8 @@ urlpatterns = [
     path('berita/informatika/', informatika, name='informatika'),
     path('berita/koinjagat/', koinjagat, name='koinjagat'),
     path('exchange_rate/', exchange_rate, name='exchange_rate'), 
-    path('kalori', kalori, name='kalori'),
-    path('otot', otot, name='otot'),
+    path('calculate-calories/', calculate_calories, name='calculate_calories'),
+    path('calculate-muscle/', calculate_muscle, name='calculate_muscle'),
     path('olahraga', olahraga, name='olahraga'),
     path('arsenal-krisis-striker', arsenal_krisis_stiker, name='arsenal_krisis_striker'),
     path('prediksi_squad_timnas', prediksi_squad_timnas, name='prediksi_squad_timnas'),
@@ -49,8 +45,6 @@ urlpatterns = [
     path('pep_guardiola', pep_guardiola, name='pep_guardiola'),
     path('nottingham', nottingham, name='nottingham'),
     path('bulutangkis', bulutangkis, name='bulutangkis'),
-
-
     path('kurs/', exchange_rate, name='exchange_rate'),
     path('berita/raffiahmad/', raffiahmad, name='raffiahmad'),
 

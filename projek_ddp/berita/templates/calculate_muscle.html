@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kalkulator Massa Otot</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Kalkulator Massa Otot</h1>
+
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-body">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary w-100">Hitung Massa Otot</button>
+            </form>
+
+            {% if result %}
+            <div class="alert alert-success mt-4">
+                <h4 class="alert-heading">Hasil Perhitungan:</h4>
+                <p>{{ result }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
