@@ -1,0 +1,284 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Pop-up Modal -->
+<div class="modal fade" id="currencyModal" tabindex="-1" aria-labelledby="currencyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="currencyModalLabel">Kurs Penukaran Uang Hari Ini</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Selamat datang!</strong> Temukan kurs penukaran uang terbaik hari ini hanya untuk Anda!</p>
+                <ul>
+                    <li>1 USD = 15,000 IDR</li>
+                    <li>1 EUR = 16,500 IDR</li>
+                    <li>1 GBP = 18,200 IDR</li>
+                </ul>
+                <p>Jangan lewatkan kesempatan untuk mendapatkan nilai tukar terbaik. Klik tombol di bawah untuk informasi lebih lanjut!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <a href="{% url 'exchange_rate' %}" class="btn btn-primary">Lihat Detail</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid d-flex justify-content-center align-items-center min-vh-100" style="padding: 0; margin: 0;">
+    <div class="card mb-4" style="width: 100%; border: none;">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active fade-in">
+                    <img src="{% static 'img/banner1-1300x400.jpg' %}" class="d-block w-100" alt="Header Image">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hasil Arsenal vs Manchester United: Skor 1-1 (3-5 Pen)</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item fade-in">
+                    <img src="{% static 'img/banner-arsenal.png' %}" class="d-block w-100" alt="Header Image">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Arsenal Krisis Striker, Dituding Salah Beli Pemain</h3>
+                    </div>
+                  </div>
+                  <div class="carousel-item fade-in">
+                    <img src="{% static 'img/banner_raffi_ahmad.png' %}" class="d-block w-100" alt="Header Image">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style="text-decoration-style: double;"><b>Raffi Ahmad: <br> Patwal Mobil RI 36 Nggak Bermaksud Arogan </b></h3>
+                    </div>
+                  </div>
+                  <div class="carousel-item fade-in">
+                    <img src="{% static 'img/banner-makan-siang.png' %}" class="d-block w-100" alt="Header Image">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style="text-decoration-style: double;"><b>Bocoran Rencana Prabowo Tambah Anggaran Rp 140 T buat Makan Gratis </b></h3>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        <div class="d-flex" style="margin-left: 50px; margin-top: 30px;">
+            <i class="fa-solid fa-newspaper mt-1 me-2"></i><h4>Berita Terkini</h4>
+        </div>
+        <div class="row g-3 mb-3 mt-2 px-5">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/emyu-1024x768.jpg' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">Arsenal Dipecundangi 10 Pemain Manchester United Via Adu Penalti Di Piala FA</h5>
+                    <p class="card-text">Arsenal takluk dari Manchester United di Piala FA meski unggul jumlah pemain selama hampir separuh pertandingan.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'berita1' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row g-3 mb-3 px-5 ">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/Home-arsenal-krisis-striker.png' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">Arsenal Krisis Striker, Dituding Salah Beli Pemain</h5>
+                    <p class="card-text">Arsenal dituding buang-buang uang saat bursa musim panas lalu. Pembelian pemain Meriam London dianggap salah sasaran dengan gagal mendatangkan striker anyar.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'arsenal_krisis_striker' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row g-3 mb-3 px-5">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/Home-pattrick-kluivert.jpg' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">Prediksi Susunan Pemain Timnas Indonesia di Era Patrick Kluivert</h5>
+                    <p class="card-text"> Timnas Indonesia kini sudah ditangani Patrick Kluivert. Berikut prediksi starter yang mungkin diturunkan oleh meneer Belanda itu.
+
+                    </p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'prediksi_squad_timnas' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row g-3 mb-3 px-5">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/Home-maguire.png' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">Amorim Ingin Semua Pemain MU Tiru Harry Maguire</h5>
+                    <p class="card-text">Harry Maguire menunjukkan perbaikan performa di Manchester United bersama Ruben Amorim. Pemain 31 tahun itu disebut pantas menjadi teladan.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'maguire' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row g-3 mb-3 px-5">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/Home-pep-guardiola.png' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">Guardiola Harus Menjilat Ludahnya Sendiri</h5>
+                    <p class="card-text">Pep Guardiola harus menjilat ludahnya sendiri. Kemarin-kemarin nggak mau belanja pemain, kini Manchester City kena badai cedera dan butuh pemain baru segera!</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'pep_guardiola' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row g-3 mb-3 mt-2 px-5">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/Home-nottingham.png' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">Nottingham Kepikiran Bisa Juara Liga Inggris? Nggak tuh</h5>
+                    <p class="card-text">Nottingham Forest masih anteng duduk di posisi tiga besar Liga Inggris. Apakah Forest mau berjuang buat jadi penantang gelar? Kata Matz Sels, nggak tuh!</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'nottingham' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row g-3 mb-3 px-5">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/Home-bulu-tangkis.png' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">Hasil India Open 2025: Dejan/Fadia Kalah dari Wakil China</h5>
+                    <p class="card-text">Dejan Ferdinansyah/Siti Fadia Silva Ramadhanti vs Jiang Zhen Bang/Wei Ya Xin tersaji di 16 besar India Open 2025. Ganda campuran Indonesia tumbang dari wakil China.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'bulutangkis' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row g-3 mb-3 px-5">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/Home-sayur.png' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">Resep Sayur Kacang Merah: Hidangan Lezat dan Bergizi</h5>
+                    <p class="card-text">Temukan resep sayur kacang merah yang lezat dan bergizi. Pelajari cara membuat, variasi, dan manfaat kesehatan dari hidangan tradisional ini.                    </p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'sayur' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row g-3 mb-3 px-5">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/Home-informatika.png' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">Teknik Informatika Belajar Apa: Panduan Lengkap untuk Calon Mahasiswa</h5>
+                    <p class="card-text">Pelajari apa saja yang dipelajari di jurusan Teknik Informatika, prospek karir, dan tips sukses kuliah. Panduan lengkap untuk calon mahasiswa IT.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'informatika' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row g-3 mb-3 px-5">
+            <div class="col-md-4 slide-in-left">
+                <img src="{% static 'img/Home-koin-jagat.png' %}" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-md-8 slide-in-right">
+                <div class="card-body">
+                    <h5 class="card-title">6 Kontroversi Koin Jagat yang Bikin Resah, Berdampak Rusak Fasilitas Umum</h5>
+                    <p class="card-text">Koin Jagat menjadi permainan berbasis aplikasi yang viral. Namun, maraknya fenomena tersebut, pemerintah resah karena pemain banyak merusak fasilitas umum.</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <a href="{% url 'koinjagat' %}" class="btn btn-primary">Baca Selengkapnya...</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add similar slide-in animations for other news sections -->
+    </div>
+</div>
+
+<style>
+/* Animasi CSS */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Referensi ke modal
+        var currencyModal = new bootstrap.Modal(document.getElementById('currencyModal'));
+
+        // Tampilkan modal saat pertama kali halaman dimuat
+        currencyModal.show();
+
+        // Tampilkan modal setiap 20 detik setelah itu
+        setInterval(function () {
+            currencyModal.show();
+        }, 60000); // 1 menit
+    });
+</script>
+{% endblock %}
