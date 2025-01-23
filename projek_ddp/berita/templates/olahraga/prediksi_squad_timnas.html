@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends '../index.html' %}
 {% block content %}
 {% load static %}
@@ -96,3 +97,103 @@
   </div>
 </div>
 {% endblock %}
+=======
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita Prediksi Susunan Pemain Timnas Indonesia -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-pattrick-kluivert.png' %}" alt="Header Image" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Prediksi Susunan Pemain Timnas Indonesia di Era Patrick Kluivert</h2>
+      <small>Oleh <span class="text-primary">Liputan Gacor</span>, <span class="text-primary">Liga Indonesia</span></small>
+      <hr />
+      <section>
+        <p>
+          Era baru Timnas Indonesia di bawah asuhan Patrick Kluivert memunculkan banyak spekulasi mengenai susunan pemain yang akan diturunkan. Pelatih asal Belanda ini dikenal dengan pendekatan taktisnya yang modern dan berbasis penguasaan bola.
+        </p>
+        <p>
+          Banyak pihak memprediksi bahwa Kluivert akan mengandalkan pemain muda berbakat yang tengah bersinar di kompetisi domestik dan internasional. Nama-nama seperti Marselino Ferdinan, Pratama Arhan, dan Elkan Baggott diprediksi akan menjadi pilar utama di skuad Garuda.
+        </p>
+        <p>
+          "Kluivert memiliki visi yang jelas untuk membawa Indonesia ke level yang lebih tinggi. Susunan pemain yang dipilihnya akan mencerminkan gaya bermain menyerang dengan organisasi pertahanan yang solid," kata salah satu analis sepak bola nasional.
+        </p>
+        <p>
+          Dengan kualifikasi Piala Dunia 2026 yang semakin dekat, para pendukung berharap Kluivert mampu membawa perubahan signifikan dalam performa tim. Strategi dan pilihan pemainnya akan menjadi kunci keberhasilan Timnas Indonesia di pentas internasional.
+        </p>
+        <p>
+          Selain itu, dukungan penuh dari federasi dan klub-klub lokal juga diharapkan untuk memberikan ruang bagi para pemain untuk berkembang dan beradaptasi dengan tuntutan permainan modern <br> Berikut adalah Prediksi Squad Timnas dibawah Pelatihan Kluivert :
+        </p>
+
+        <h3>Penjaga Gawang</h3>
+        <p>Maarten Paes diprediksi akan tetap menjadi pilihan utama di bawah mistar gawang. Alternatif lainnya termasuk Ernando Ari, Nadeo Argawinata, dan Muhammad Adi Satryo.</p>
+
+        <h3>Bek Tengah</h3>
+        <p>Persaingan di posisi bek tengah sangat ketat. Ada nama-nama seperti Jay Idzes, Mees Hilgers, Justin Hubner, Rizky Ridho, Jordi Amat, hingga Muhammad Ferarri. Jay Idzes kemungkinan besar menjadi prioritas utama. Sementara itu, Rizky Ridho yang merupakan pemain lokal juga punya peluang besar untuk mendapatkan satu tempat. Alternatif lainnya, Mees Hilgers, bisa menjadi opsi untuk memperkuat pertahanan.</p>
+
+        <h3>Fullback Kanan</h3>
+        <p>Stok pemain di posisi fullback kanan melimpah, dengan Asnawi Mangkualam Bahar, Sandy Walsh, Kevin Diks, dan Yakob Sayuri menjadi kandidat. Dari nama-nama ini, Kevin Diks diprediksi akan menjadi pilihan utama.</p>
+
+        <h3>Fullback Kiri</h3>
+        <p>Pratama Arhan selama ini menjadi pemain andalan di era Shin Tae-yong, tetapi kehadiran Calvin Verdonk bisa membuat Arhan bersaing ketat. Shayne Pattynama juga tersedia untuk memperkuat posisi ini.</p>
+
+        <h3>Gelandang</h3>
+        <p>Di lini tengah, pilihan cukup terbatas. Ivar Jenner, yang sudah menunjukkan performa apik, kemungkinan tetap menjadi pilihan utama Kluivert. Untuk tandem Jenner, Thom Haye berpotensi diplot sebagai pengatur serangan, sementara satu tempat lagi bisa diberikan kepada Marselino Ferdinan. Alternatif lain adalah Eliano Reijnders.</p>
+
+        <h3>Penyerang</h3>
+        <p>Trio serangan yang diprediksi diisi oleh Ragnar Oratmangoen, Rafael Struick, dan Ole Romeny. Namun, Romeny saat ini masih menjalani proses naturalisasi dan tinggal mengambil sumpah.</p>
+
+        <h3>Jadwal Pertandingan</h3>
+        <p>Indonesia akan kembali bertanding di ajang Kualifikasi Piala Dunia 2026 pada 20 Maret 2025, menghadapi Australia di Sydney.</p>
+
+        <h3>Prediksi Susunan Pemain</h3>
+        <p>Formasi 4-3-3: Maarten Paes; Kevin Diks, Jay Idzes, Rizky Ridho (Mees Hilgers), Calvin Verdonk; Thom Haye, Ivar Jenner, Marselino Ferdinan (Eliano Reijnders); Ragnar Oratmangoen, Ole Romeny, Rafael Struick.</p>
+      </section>
+
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Saksikan video berikut untuk mendapatkan informasi lengkap tentang berita ini!</p>
+          <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tc1Uv7jffZU?si=JYtvoyCYSNl5O6p8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+      <div class="card mb-3">
+        <img src="https://asset.kompas.com/crops/5t1MluRsIvuCbhxAmoDwEgVTgZU=/99x0:917x546/1200x800/data/photo/2025/01/15/6787a2cd63295.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Mitchel Bakker, Satu Lagi Pemain Naturalisasi yang Akan Diboyong Kluivert?</h5>
+          <a target="_blank" href="https://bola.kompas.com/read/2025/01/15/19345848/mitchel-bakker-satu-lagi-pemain-naturalisasi-yang-akan-diboyong-kluivert" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://asset.kompas.com/crops/8lWeIA2BImWJUBLc-CN7SafoFto=/0x0:0x0/1200x800/data/photo/2025/01/12/6783b49dadedc.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Sergio van Dijk Bicara Tim Kepelatihan Patrick Kluivert dan Perlunya Stok Striker</h5>
+          <a target="_blank" href="https://bola.kompas.com/read/2025/01/15/17481868/sergio-van-dijk-bicara-tim-kepelatihan-patrick-kluivert-dan-perlunya-stok" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+>>>>>>> 6e2abe2f5ad731099719e3c9532f5bdcd7fd0f9f

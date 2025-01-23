@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends '../index.html' %}
 {% block content %}
 {% load static %}
@@ -101,3 +102,108 @@
   </div>
 </div>
 {% endblock %}
+=======
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita Harry Maguire -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-maguire.png' %}" alt="Harry Maguire" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Harry Maguire Jadi Teladan di Manchester United Berkat Performa dan Dedikasinya</h2>
+      <small>Oleh <span class="text-primary">Liputan Gacor</span>, <span class="text-primary">Liga Inggris</span></small>
+      <hr />
+      <section>
+        <p>
+          Jakarta - Harry Maguire menunjukkan peningkatan performa yang signifikan di Manchester United di bawah asuhan Ruben Amorim. Bek tengah berusia 31 tahun itu dianggap pantas menjadi contoh bagi rekan-rekannya di skuad Setan Merah.
+        </p>
+        <p>
+          Maguire menjadi salah satu pemain kunci dalam kemenangan dramatis Manchester United atas Arsenal di babak ketiga Piala FA. Dalam pertandingan yang berlangsung di Emirates Stadium akhir pekan lalu, kedua tim bermain imbang 1-1 selama 120 menit sebelum MU menang lewat adu penalti dengan skor 5-3.
+        </p>
+        <p>
+          Sejak Amorim memimpin MU, ia telah memainkan 13 pertandingan bersama tim. Dalam periode tersebut, Maguire tampil dalam sembilan laga, tujuh di antaranya sebagai starter.
+        </p>
+
+        <h3>Performa Luar Biasa Meski Tidak Fit</h3>
+        <p>
+          Saat menghadapi Arsenal, Maguire ternyata tidak dalam kondisi fisik terbaiknya. Meski begitu, ia tetap tampil maksimal hingga akhirnya digantikan oleh Leny Yoro pada menit ke-104. Sikap pantang menyerah Maguire ini menuai pujian dari Amorim.
+        </p>
+
+        <blockquote>
+          <p>"Harry sakit saat pertandingan terakhir. Dia memberikan segalanya hingga akhir — dan itu yang saya inginkan dari setiap pemain," ujar Amorim seperti dikutip dari situs resmi Manchester United.</p>
+        </blockquote>
+
+        <h3>Inspirasi untuk Pemain Lain</h3>
+        <p>
+          Amorim, yang sebelumnya sukses bersama Sporting Lisbon, menegaskan bahwa dedikasi dan kerja keras Maguire harus menjadi teladan bagi seluruh pemain Manchester United.
+        </p>
+
+        <p>
+          Ketika ditanya soal peluang Maguire tampil melawan Southampton, Amorim menjawab, "Harry? Kita lihat saja nanti. Kami tak bisa kehilangannya. Kita tunggu kondisinya. Martinez? Dia merasa baik-baik saja. Diogo? Dia tidak bisa bermain — itu salahnya!"
+        </p>
+
+        <h3>Jadwal Selanjutnya</h3>
+        <p>
+          Manchester United akan menghadapi Southampton dalam lanjutan Liga Inggris. Pertandingan ini akan berlangsung di Old Trafford pada Jumat (17/1/2024) dini hari WIB.
+        </p>
+
+        <p>
+          Dedikasi dan semangat juang Maguire menjadi inspirasi bagi para pemain MU, sekaligus menunjukkan bahwa ia masih memiliki peran penting di tim, meski sempat diragukan sebelumnya.
+        </p>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Saksikan video berikut untuk mendapatkan informasi lengkap tentang berita ini!</p>
+          <div class="ratio ratio-16x9">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/example" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+      <div class="card mb-3">
+        <img src="https://asset.kompas.com/crops/4vPNCBz2O0cSJ5THCgpnRnz2_JI=/114x0:858x495/1200x800/data/photo/2024/12/19/67636b037650d.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Marcus Rashford Tertarik ke AC Milan tapi Ada Syarat Khusus dari I Rossoneri</h5>
+          <a target="_blank" href="https://bola.kompas.com/read/2025/01/14/19241788/marcus-rashford-tertarik-ke-ac-milan-tapi-ada-syarat-khusus-dari-i-rossoneri" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://asset.kompas.com/crops/3HAvsLVf1QSJ-60fu5IuD3jXwwI=/237x0:974x491/1200x800/data/photo/2025/01/13/6784086ea5c87.jpg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Altay Bayindir Cemerlang, Edwin van der Sar Layangkan Apresiasi</h5>
+          <a target="_blank" href="https://bola.kompas.com/read/2025/01/13/22550298/altay-bayindir-cemerlang-edwin-van-der-sar-layangkan-apresiasi" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+>>>>>>> 6e2abe2f5ad731099719e3c9532f5bdcd7fd0f9f

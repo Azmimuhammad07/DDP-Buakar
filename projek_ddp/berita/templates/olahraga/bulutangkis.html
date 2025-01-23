@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends '../index.html' %}
 {% block content %}
 {% load static %}
@@ -84,3 +85,91 @@
   </div>
 </div>
 {% endblock %}
+=======
+{% extends '../index.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Bagian Kiri (9) -->
+    <div class="col-lg-9"> 
+      <!-- Berita Dejan/Fadia -->
+      <div class="d-flex justify-content-center mb-5">
+        <img src="{% static 'img/web-bulu-tangkis.png' %}" alt="Dejan Ferdinansyah dan Siti Fadia Silva Ramadhanti" class="img-fluid" width="640px" height="360px">
+      </div>
+      <h2>Dejan/Fadia Kalah dari Wakil China di India Open 2025</h2>
+      <small>Oleh <span class="text-primary">Liputan Gacor</span>, <span class="text-primary">Bulu Tangkis</span></small>
+      <hr />
+      <section>
+        <p>
+          Dejan Ferdinansyah/Siti Fadia Silva Ramadhanti harus mengakui keunggulan pasangan China, Jiang Zhen Bang/Wei Ya Xin, di babak 16 besar India Open 2025. Pertandingan yang berlangsung di Indira Gandhi Sports Complex, Kamis (16/1/2025), berakhir dengan kekalahan Dejan/Fadia 19-21, 16-21.
+        </p>
+
+        <h3>Jalannya Pertandingan</h3>
+        <p>
+          Awal gim pertama berjalan ketat dengan kedua pasangan saling bergantian meraih poin. Setelah skor imbang 4-4, Dejan/Fadia mulai tertinggal 4-7. Meski sempat memangkas jarak, interval gim pertama berakhir dengan skor 9-11 untuk keunggulan pasangan China.
+        </p>
+        <p>
+          Selepas jeda, Dejan/Fadia mampu berbalik unggul 12-11 dan pertandingan semakin sengit hingga skor imbang 16-16. Sayangnya, Dejan/Fadia gagal mempertahankan momentum meski sempat memimpin 19-16. Gim pertama akhirnya menjadi milik Jiang/Wei dengan skor 19-21.
+        </p>
+
+        <p>
+          Memasuki gim kedua, Dejan/Fadia kembali mengalami kesulitan. Mereka tertinggal 0-4 di awal dan 9-11 di interval. Meskipun sempat mendekat pada skor 10-11, pasangan Indonesia tidak mampu menjaga konsistensi. Jiang/Wei memperlebar jarak menjadi 14-10 dan akhirnya menutup gim kedua dengan skor 16-21.
+        </p>
+
+        <blockquote>
+          <p>"Hasil ini tentu mengecewakan, tapi kami akan evaluasi untuk tampil lebih baik di turnamen berikutnya," ungkap Dejan dalam wawancara usai pertandingan.</p>
+        </blockquote>
+      </section>
+
+      <!-- Kotak Video YouTube -->
+      <div class="card my-5 shadow-lg border-0">
+        <div class="card-body text-center">
+          <h4 class="card-title">Tonton Video Terkait</h4>
+          <p class="card-text">Saksikan video berikut untuk momen-momen penting dari pertandingan ini!</p>
+          <div class="ratio ratio-16x9">
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/example" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol Kembali -->
+      <div class="d-flex justify-content-center">
+        <a href="{% url 'home' %}" class="btn btn-secondary">Kembali Ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan (3) -->
+    <div class="col-lg-3">
+      <h4>Berita Lainnya</h4>
+      <!-- Berita 1 -->
+      <div class="card mb-3">
+        <img src="https://asset.kompas.com/crops/zBt4eugMZp7dYO2AVk_gm44RHY0=/3x0:700x465/1200x800/data/photo/2024/10/18/6711a86643ca0.jpeg" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Hasil India Open 2025: Jonatan Christie ke Perempat Final dalam 40 Menit</h5>
+          <a target="_blank" href="https://www.kompas.com/badminton/read/2025/01/16/21345038/hasil-india-open-2025-jonatan-christie-ke-perempat-final-dalam-40-menit">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Berita 2 -->
+      <div class="card mb-3">
+        <img src="https://asset.kompas.com/crops/7vmr6h4hgGAtxpSQ-bCMOHeNeVk=/0x53:944x682/1200x800/data/photo/2020/10/23/5f928fd7bc77a.png" class="card-img-top" alt="Gambar Berita">
+        <div class="card-body">
+          <h5 class="card-title">Wasit Legendaris UFC: Maskapai Frontier Airlines Harus Minta Maaf ke Khabib</h5>
+          <a target="_blank" href="https://www.kompas.com/sports/read/2025/01/14/04500038/wasit-legendaris-ufc--maskapai-frontier-airlines-harus-minta-maaf-ke" class="btn btn-primary">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+>>>>>>> 6e2abe2f5ad731099719e3c9532f5bdcd7fd0f9f
