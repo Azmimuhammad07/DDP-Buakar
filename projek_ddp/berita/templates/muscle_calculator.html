@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Massa Otot</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Kalkulator Massa Otot</h1>
+
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-body">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Jenis Kelamin</label>
+                    <select class="form-select" id="gender" name="gender" required>
+                        <option value="">Pilih jenis kelamin</option>
+                        <option value="male">Laki-laki</option>
+                        <option value="female">Perempuan</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="weight" class="form-label">Berat Badan (kg)</label>
+                    <input type="number" step="0.1" class="form-control" id="weight" name="weight" placeholder="Masukkan berat badan Anda" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="height" class="form-label">Tinggi Badan (cm)</label>
+                    <input type="number" step="0.1" class="form-control" id="height" name="height" placeholder="Masukkan tinggi badan Anda" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Hitung Massa Otot</button>
+            </form>
+
+            {% if result %}
+            <div class="alert alert-success mt-4">
+                <h4 class="alert-heading">Hasil Perhitungan:</h4>
+                <p>Massa tubuh tanpa lemak Anda: {{ result }} kg.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
